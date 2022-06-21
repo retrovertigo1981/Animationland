@@ -1,0 +1,365 @@
+/* body {
+    counter-reset: game;
+}
+
+input:checked {
+    counter-increment: game;
+}
+
+.total-count::after {
+    content: counter(game);
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    counter-reset: game;
+    
+}
+
+input:checked {
+    counter-increment: game;
+}
+
+.total-count::after {
+    content: counter(game);
+}
+
+.phone {
+    position: relative;
+    height: 600px;
+    width: 300px;
+    border: 8px solid black;
+    border-radius: 40px;
+    background: #ccefff;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+    
+}
+
+/* bunny 1 */
+
+.layer-1 {
+    position: absolute;
+    z-index: 1;
+    height: 455px;
+    width: 80px;
+    background: transparent;
+    left: 60px;
+    bottom: 0;
+
+    animation-name: hide;
+    animation-duration: 1.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hide {
+    0% {
+        bottom: 0;
+    }
+
+
+    25% {
+        bottom: -80px
+    }
+
+
+
+    100% {
+        bottom: 0;
+    }
+
+}
+.layer-1 input[type=checkbox] {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    
+}
+
+
+
+
+
+.left-ear--outer {
+    position: absolute;
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    left: 5px;
+
+}
+
+.left-ear--inner {
+    position: absolute;
+    background: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    top: 10px;
+    left: 10px;
+}
+
+.right-ear--outer {
+    position: absolute;
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    top: 0;
+    right: 5px;
+
+}
+
+.right-ear--inner {
+    position: absolute;
+    background: pink;
+    border-radius: 90%;
+    width: 10px;
+    height: 50px;
+    top: 10px;
+    right: 10px;
+}
+
+.head {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background: white;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 30px;
+}
+
+.head__eye {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: black;
+
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+    0% {
+        height: 8px;
+    }
+
+    5% {
+        transform: translate(0px, 4px);
+        height: 3px;
+    }
+
+    10% {
+        transform: translate(0px, 0px);
+        height: 8px;
+    }
+}
+
+.head__eye--left {
+    position: absolute;
+    top: 15px;
+    left: 28px;
+}
+
+.head__eye--right {
+    position: absolute;
+    top: 15px;
+    right: 28px;
+}
+
+
+/* bunny 2 */
+.layer-2 {
+    position: absolute;
+    z-index: 2;
+    height: 455px;
+    width: 80px;
+    background: transparent;
+    right: 60px;
+    bottom: 0;
+}
+
+.layer-3 {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 260px;
+    height: 400px;
+    background: #b7584e;
+    bottom: 0;
+    border-radius: 20px 20px 20px 0;
+
+}
+
+.layer-4 {
+    position: absolute;
+    z-index: 4;
+    height: 335px;
+    width: 80px;
+    background: transparent;
+    left: 35px;
+    bottom: 0;
+}
+
+.layer-5 {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    width: 185px;
+    height: 280px;
+    background: #b7584e;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    box-shadow: 7px 0px 16px 3px rgba(0,0,0,0.43);
+}
+
+.layer-6 {
+    position: absolute;
+    z-index: 6;
+    height: 235px;
+    width: 80px;
+    background: transparent;
+    right: 45px;
+    bottom: 0;
+}
+
+.layer-7 {
+    position: absolute;
+    z-index: 7;
+    width: 150px;
+    height: 180px;
+    background: #b7584e;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px 20px 30px 25px;
+    box-shadow: -7px 0px 16px 3px rgba(0,0,0,0.43);
+}
+
+.layer-8 {
+    position: absolute;
+    z-index: 8;
+    left: 0;
+    right: 0;
+    bottom: -30px;
+    margin: 0 auto;
+    width: 100px;
+    height: 110px;
+    background: #66A167;
+    border-radius: 50%;
+    box-shadow: 0px -2px 29px 5px rgba(0,0,0,0.58);
+    
+}
+
+.layer-8 .lawn-1 {
+    
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #66A167;
+    border-radius: 50%;
+    left: -30px;
+    bottom: -5px;
+    
+}
+
+.layer-8 .lawn-2 {
+    
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: #66A167;
+    border-radius: 50%;
+    right   : -30px;
+    bottom: -5px;
+    
+}
+
+
+
+
+.layer-9 {
+    position: absolute;
+    z-index: 9;
+    right: -40px; 
+    width: 100px;
+    height: 100px;
+    background: white;
+    bottom: 0;
+    border-radius: 50%;
+}
+
+.layer-9 .cloud {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background: white;
+    bottom: -10px;
+    right: 50px;
+    border-radius: 50px 0 0 50px;
+}
+
+.layer-10 {
+    position: absolute;
+    z-index: 10;
+    left: -40px; 
+    width: 100px;
+    height: 100px;
+    background: white;
+    bottom: 0;
+    border-radius: 50%;
+}
+
+.layer-10 .cloud {
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background: white;
+    bottom: -10px;
+    left: 50px;
+    border-radius: 0 50px 50px 0;
+}
+
+.grass {
+  
+    background: #51af5e;
+    height: 25px;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.zigzag {
+    background: linear-gradient(135deg,  #51af5e 25%, transparent 25%) -50px 0, linear-gradient(-135deg
+,  #51af5e 25%, transparent 25%) -50px 0, linear-gradient(
+45deg
+, #B7584E 25%, transparent 25%), linear-gradient(
+-45deg
+, transparent 25%, #a54a38 25%);
+  background-size: 33px 30px;
+  height: 30px;
+  width: 100%;
+}
+
+
