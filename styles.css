@@ -1,4 +1,11 @@
+@font-face {
+    font-family: "Alice in Wonderland"; 
+    src: url("//db.onlinewebfonts.com/t/bd9854838c01df28d837da7fa2240dcd.eot");       
+    src: url("//db.onlinewebfonts.com/t/bd9854838c01df28d837da7fa2240dcd.eot?#iefix") format("embedded-opentype"),        url("//db.onlinewebfonts.com/t/bd9854838c01df28d837da7fa2240dcd.woff2") format("woff2"),        url("//db.onlinewebfonts.com/t/bd9854838c01df28d837da7fa2240dcd.woff") format("woff"),        url("//db.onlinewebfonts.com/t/bd9854838c01df28d837da7fa2240dcd.ttf") format("truetype"),        url("//db.onlinewebfonts.com/t/bd9854838c01df28d837da7fa2240dcd.svg#Alice in Wonderland") format("svg"); 
+}
 
+
+    
 * {
     margin: 0;
     padding: 0;
@@ -22,10 +29,21 @@ input:checked {
     
 }
 
+.title {
+    display: flex;
+    place-content: center;
+    margin-top: 30px;
+    font-family: "Alice in Wonderland"; 
+    font-size: 35px;
+    line-height: 20px;
+    /* text-align: center; */
+    color: #940000
+}
 .score {
     display: flex;
     place-content: center;
-    margin-top: 50px;
+    margin-top: 15px;
+    color: #940000
 }
 
 .score::after {
@@ -57,10 +75,23 @@ input:checked {
     
     
 
+    
+}
+
+
+
+.rabbit {
+    width: 100%;
+    height: 80px;
+    position: relative;
+
     animation-name: hide;
     animation-duration: 1s;
+    animation-direction: alternate-reverse;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
+    
+
 }
 
 @keyframes hide {
@@ -79,12 +110,6 @@ input:checked {
         bottom: 0;
     }
 
-}
-
-.rabbit {
-    width: 100%;
-    height: 80px;
-    position: relative;
 }
 
 .layer-1 input[type="checkbox"] {
@@ -128,7 +153,8 @@ input:checked {
 }
 
 input[type="checkbox"]:checked + .rabbit{
-    display: none;
+    /* display: none; */
+    
 }
 
 
